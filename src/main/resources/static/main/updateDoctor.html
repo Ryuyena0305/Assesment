@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>환자 정보 수정</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff0f5; /* 연한 핑크 배경 */
+        color: #555;
+        text-align: center;
+        padding: 50px;
+    }
+
+    h3 {
+        color: #db7093; /* 로즈 핑크 */
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    form, .reservation-list {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 400px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.2em;
+        color: #db7093;
+    }
+
+    input[type="text"], input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #db7093;
+        border-radius: 8px;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #ffc0cb; /* 베이비 핑크 */
+        color: white;
+        border: none;
+        width: 100%;
+        height: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ffb6c1; /* 라이트 핑크 */
+    }
+
+    .reservation-list h4 {
+        font-size: 1.8em;
+        color: #db7093;
+        margin-bottom: 20px;
+    }
+
+    .reservation-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .reservation-list li {
+        background: #ffe4e1;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+<h3>의사 정보 수정 및 진료 목록</h3>
+
+<div class="container">
+  <!-- 환자 정보 수정 폼 -->
+  <form id="patientForm">
+    <label for="doctorName">이름</label>
+    <input type="text" id="doctorName" class="doctorName" name="patientName">
+
+    <label for="specialty">전공</label>
+    <input type="text" id="specialty" class="specialty" name="birthDate">
+
+    <label for="phone">전화번호</label>
+    <input type="tel" id="phone" class="phone" name="phoneNumber">
+
+    <button type="button" onclick="onUpdate()">수정하기</button>
+  </form>
+
+  <!-- 예약 목록 박스 -->
+  <div class="reservation-list">
+    <h4>진료 목록</h4>
+    <ul id="reservationList">
+
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="updatedoctor.js"></script>
+
+</body>
+</html>

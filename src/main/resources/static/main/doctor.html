@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5; /* 연한 핑크 배경 */
+            color: #555;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h3 {
+            color: #db7093; /* 로즈 핑크 */
+            font-size: 2em;
+        }
+
+        button {
+            background-color: #ffc0cb; /* 베이비 핑크 */
+            color: white;
+            border: none;
+            width: 50px; /* 버튼 너비 */
+            height: 30px; /* 버튼 높이 */
+            font-size: 1.5em; /* 폰트 크기 증가 */
+            font-size: 1em;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        table{
+        margin : 0 auto;
+        }
+
+        button:hover {
+            background-color: #ffb6c1; /* 라이트 핑크 */
+        }
+    </style>
+</head>
+<body>
+<h3>병원 의사 관리 시스템</h3>
+<table border="1">
+    <thead>
+    <tr>
+        <th>의사번호</th>
+        <th>의사이름</th>
+        <th>전공</th>
+        <th>핸드폰 번호</th>
+        <th>비고</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+
+</table>
+<button type="button" style= "width : 200px;" onclick="onSavepage()">등록하기</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="doctor.js"></script>
+
+
+</body>
+</html>

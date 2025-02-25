@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5; /* 연한 핑크 배경 */
+            color: #555;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h3 {
+            color: #db7093; /* 로즈 핑크 */
+            font-size: 2em;
+        }
+
+        button {
+            background-color: #ffc0cb; /* 베이비 핑크 */
+            color: white;
+            border: none;
+            width: 200px; /* 버튼 너비 */
+            height: 80px; /* 버튼 높이 */
+            font-size: 1.5em; /* 폰트 크기 증가 */
+    font-weight: bold; /* 볼드 처리 */
+            font-size: 1em;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffb6c1; /* 라이트 핑크 */
+        }
+    </style>
+</head>
+<body>
+<h3>병원 진료 예약 관리 시스템</h3>
+<button type="button" onclick="onPatient()">환자 관리</button>
+
+<button type="button" onclick="onDoctor()">의사 관리</button>
+
+<button type="button" onclick="onResv()">진료 예약 관리</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
