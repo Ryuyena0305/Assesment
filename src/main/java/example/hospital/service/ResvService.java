@@ -38,6 +38,10 @@ public class ResvService {
         return resvMapper.findbydoctor(doctorid);
     }
 
+    public int statusupdate( ResvDto resvDto){
+        return resvMapper.statusupdate(resvDto);
+    }
+
 
     public int update( ResvDto resvDto){
         return resvMapper.update(resvDto);

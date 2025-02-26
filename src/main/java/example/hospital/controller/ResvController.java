@@ -38,6 +38,11 @@ public class ResvController {
         return resvService.findbydoctor(doctorid);
     }
 
+    @PutMapping("/status")
+    public int statusupdate(@RequestBody ResvDto resvDto){
+        return resvService.statusupdate(resvDto);
+    }
+
     @PutMapping
     public int update(@RequestBody ResvDto resvDto){
         return resvService.update(resvDto);

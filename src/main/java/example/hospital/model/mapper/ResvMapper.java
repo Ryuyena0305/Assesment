@@ -2,6 +2,7 @@ package example.hospital.model.mapper;
 
 import example.hospital.model.dto.ResvDto;
 import org.apache.ibatis.annotations.*;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -24,6 +25,10 @@ public interface ResvMapper {
 
     @Select("select * from appointment inner join patient on appointment.patientid = patient.patientid where doctorid = #{doctorid}")
     public List<ResvDto> findbydoctor( int doctorid);
+
+    @Update("update appointment set  status = #{status} where appointmentid = #{appointmentid}  ")
+    int statusupdate( ResvDto resvDto);
+
 
     @Update("update appointment set  doctorid = #{doctorid}, appointmentdate = #{appointmentdate}, appointmenttime = #{appointmenttime} ,status=#{status} where appointmentid = #{appointmentid}  ")
     public int update( ResvDto resvDto);
